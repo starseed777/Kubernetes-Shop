@@ -1,0 +1,1 @@
+Services / deployments for a shop application to run on k8s.
