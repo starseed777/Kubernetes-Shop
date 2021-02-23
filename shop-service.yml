@@ -4,13 +4,13 @@ metadata:
   name: carts-db
   namespace: sock-shop
   labels:
-    app: carts-db
+    name: carts-db
 spec:
   ports:
   - port: 27017
     targetPort: 27017
   selector:
-    app: carts-db
+    name: carts-db
 
 --- 
 
@@ -20,13 +20,13 @@ metadata:
   name: carts
   namespace: sock-shop
   labels:
-    app: carts 
+    name: carts 
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: carts
+    name: carts
 
 --- 
 
@@ -36,13 +36,13 @@ metadata:
   name: catalogue-db
   namespace: sock-shop
   labels:
-    app: catalogue-db
+    name: catalogue-db
 spec:
   ports:
   - port: 3306
     targetPort: 3306
   selector:
-    app: catalogue-db
+    name: catalogue-db
 
 ---
 
@@ -52,13 +52,13 @@ metadata:
   name: catalogue
   namespace: sock-shop
   labels:
-    app: catalogue
+    name: catalogue
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: catalogue
+    name: catalogue
 
 ---
 
@@ -68,7 +68,7 @@ metadata:
   name: front-end
   namespace: sock-shop
   labels:
-    app: front-end
+    name: front-end
 spec:
   type: NodePort
   ports:
@@ -76,7 +76,7 @@ spec:
     targetPort: 8079
     nodePort: 30080
   selector:
-    app: front-end
+    name: front-end
 
 --- 
 
@@ -86,13 +86,13 @@ metadata:
   name: orders-db
   namespace: sock-shop
   labels:
-    app: orders-db
+    name: orders-db
 spec:
   ports:
   - port: 27017
     targetPort: 27017
   selector:
-    app: orders-db
+    name: orders-db
 
 ---
 
@@ -102,13 +102,13 @@ metadata:
   name: orders
   namespace: sock-shop
   labels:
-    app: orders
+    name: orders
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: orders
+    name: orders
 
 ---
 
@@ -118,13 +118,13 @@ metadata:
   name: payment
   namespace: sock-shop
   labels:
-    app: payment 
+    name: payment 
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: payment
+    name: payment
 
 ---
 
@@ -136,13 +136,13 @@ metadata:
     prometheus.io/path: "/prometheus"
   namespace: sock-shop
   labels:
-    app: queue-master 
+    name: queue-master 
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: queue-master
+    name: queue-master
     
 ---
 
@@ -152,13 +152,13 @@ metadata:
   name: rabbitmq
   namespace: sock-shop
   labels:
-    app: rabbitmq
+    name: rabbitmq
 spec:
   ports:
   - port: 5672
     targetPort: 5672
   selector:
-    app: rabbitmq
+    name: rabbitmq
     
 ---
 
@@ -168,13 +168,13 @@ metadata:
   name: shipping
   namespace: sock-shop
   labels:
-    app: shipping
+    name: shipping
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: shipping
+    name: shipping
     
 ---
 
@@ -184,13 +184,13 @@ metadata:
   name: user-db
   namespace: sock-shop
   labels:
-    app: user-db
+    name: user-db
 spec:
   ports:
   - port: 27017
     targetPort: 27017
   selector:
-    app: user-db
+    name: user-db
 
 ---
 
@@ -200,10 +200,10 @@ metadata:
   name: user
   namespace: sock-shop
   labels:
-    app: user 
+    name: user 
 spec:
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: user
+    name: user
