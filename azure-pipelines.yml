@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: kubectl apply -f shop-service.yml
+  displayName: 'Run kubernetes service'
+
+- script: kubectl apply -f shop-deployment.yml
+  displayName: 'Run kubernetes deployment'
