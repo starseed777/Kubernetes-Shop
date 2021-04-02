@@ -1,6 +1,9 @@
 trigger:
 - master
 
+pool:
+  name: Default
+
 steps:
 - script: kubectl apply -f shop-service.yml
   displayName: 'Run kubernetes service'
